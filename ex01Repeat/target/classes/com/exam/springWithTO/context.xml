@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding= "UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<bean name="to" class="com.exam.springWithTO.BoardTO">
+	<constructor-arg value="내용1"/>
+	<constructor-arg value="메일1"/>
+	<constructor-arg value="이름1"/>
+</bean>
+
+<bean name="helloboard1" class="com.exam.springWithTO.HelloBoard" scope="prototype" >
+	<constructor-arg>
+		<ref bean="to"/>
+	</constructor-arg>
+</bean>
+</beans>
